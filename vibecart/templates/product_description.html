@@ -1,4 +1,5 @@
 {% load static %}
+
 <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
@@ -27,20 +28,26 @@
                 <p>{{ product.title }}</p>
                 <h1>{{ product.title }}</h1>
                 <h4>₹{{ product.price|floatformat:2 }}</h4>
-                <select>
+
+                <form method="post" action="{% url 'add_to_cart' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                <select name="size" >
                     <option>Select Size</option>
                     <option>XXL</option>
                     <option>XL</option>
                     <option>L</option>
                     <option>M</option>
                     <option>S</option>
-                </select>
-                <input type="number" value="1">
-                <a href="" class="btn">Add To Cart</a>
-
+                </select> 
+                <input type="hidden" name="product_id" value="{{ product.id }}">
+                <input type="number" name="quantity" value="1">
                 <h3>Product Details <i class="fa fa-indent"></i></h3>
                 <br>
                 <p>{{ product.description }}</p>
+                <br>
+                <br>
+                <button type="submit" class="btn">Add To Cart</button>
+                </form>
             </div>
         </div>
     </div>

@@ -71,9 +71,9 @@ p{
 .btn:hover{
     background: #563434;
 }
-.header{
-    background: radial-gradient(#fff,#ffd6d6);
-   
+.header {
+    background: url("../images/banner.png") no-repeat; 
+     
 }
 .header .row{
     margin-top: 70px;
@@ -386,10 +386,10 @@ th:last-child{
     padding: 50px 0;
     background: radial-gradient(#fff, #ffd6d6);
 }
-.form-container{
+.message-container{
     background: #fff;
     width: 300px;
-    height: 400px;
+    height: fit-content;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -397,6 +397,27 @@ th:last-child{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+
+.error{
+    color: red;
+}
+
+.sucess{
+    color: green;
+}
+
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
 .form-container span{
     font-weight: bold;
     padding: 0 10px;
@@ -499,4 +520,61 @@ form a{
     .cart-info p{
         display: none;
     }
+        /* Cart Table Styling */
+    .cart-container {
+        margin: 80px auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .cart-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    th {
+        text-align: left;
+        padding: 10px;
+        color: #fff;
+        background: #ff523b;
+        font-weight: normal;
+    }
+    td {
+        padding: 15px 10px;
+    }
+    td input {
+        width: 50px;
+        height: 30px;
+        padding: 5px;
+    }
+    td a {
+        color: #ff523b;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .cart-info img {
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+        object-fit: cover;
+    }
+    .total-price {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    .total-price table {
+        border-top: 3px solid #ff523b;
+        width: 100%;
+        max-width: 400px;
+    }
+    td:last-child {
+        text-align: right;
+    }
+    th:last-child {
+        text-align: right;
+    }
+
 }
